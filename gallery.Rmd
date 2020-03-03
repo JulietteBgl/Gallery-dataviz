@@ -1,0 +1,39 @@
+---
+title: "Gallery DataViz R and Python"
+author: "Juliette Bassnagel & Pauline Olivier"
+date: "03/03/2020"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: readable
+    highlight: tango
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library('reticulate')
+use_python("/usr/local/anaconda3/envs/dataviz/bin/python")
+use_condaenv(condaenv = "dataviz", conda = "/usr/local/anaconda3/bin/conda")
+```
+
+```{python, echo=FALSE}
+import seaborn as sns
+df = sns.load_dataset('tips')
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+```
+
+
+### Boxplot
+**Python**
+```{python}
+sns.boxplot(x="day", y="total_bill", hue="smoker", data=df)
+```
+
+**R**
+
