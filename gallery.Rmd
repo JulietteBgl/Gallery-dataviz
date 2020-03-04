@@ -17,8 +17,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r, echo=FALSE}
 library('reticulate')
-use_python("/usr/local/anaconda3/envs/dataviz/bin/python")
-use_condaenv(condaenv = "dataviz", conda = "/usr/local/anaconda3/bin/conda")
+
+# Pauline
+# use_python("/usr/local/anaconda3/envs/dataviz/bin/python") 
+
+# Juliette
+# use_python("/Users/juliette.bassnagel/anaconda3/envs/gallery/bin/python") 
+use_python("/Users/juliette.bassnagel/anaconda3/bin/python")
+
+# Pauline
+# use_condaenv(condaenv = "dataviz", conda = "/usr/local/anaconda3/bin/conda")
+
+# Juliette
+use_condaenv(condaenv = "gallery", conda = "/Users/juliette.bassnagel/anaconda3/bin/conda")
 ```
 
 ```{python, echo=FALSE}
